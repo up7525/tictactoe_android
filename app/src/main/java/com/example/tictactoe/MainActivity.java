@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private void ecouteBouton(Button btn) {
         btn.setOnClickListener(new Button.OnClickListener(){
             public void onClick(View v) {
-
+            //    btn.setText("lol");
             }
         });
     }
