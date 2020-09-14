@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
+
     }
 
     private void init() {
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         value.setTextColor(Color.RED);
                     }
+
+                    finDePartie();
                 }
             });
         }
@@ -63,7 +67,17 @@ public class MainActivity extends AppCompatActivity {
         }
     } // détermine tour du joueur et change le nom du prochain
 
-    private void finDePartie() { // Détermination des cas qui engendrent une fin de partie
+    private boolean testBouton(Button btn) {
+        boolean test = btn.isEnabled();
+        return test;
+    }
 
+    private boolean finDePartie() { // Détermination des cas qui engendrent une fin de partie
+        if (!testBouton(((Button) findViewById(R.id.button))) && !testBouton(((Button) findViewById(R.id.button2))) && !testBouton(((Button) findViewById(R.id.button3))) && !testBouton(((Button) findViewById(R.id.button4))) && !testBouton(((Button) findViewById(R.id.button5))) && !testBouton(((Button) findViewById(R.id.button6))) && !testBouton(((Button) findViewById(R.id.button7))) && !testBouton(((Button) findViewById(R.id.button8))) && !testBouton(((Button) findViewById(R.id.button9)))) {
+            Toast.makeText(MainActivity.this,"Fin", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            return false;
+        }
     }
 }
