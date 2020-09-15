@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // attend les clics et écrit dans les boutons
-    public void ecouteBouton() {
+    private void ecouteBouton() {
         ArrayList<Button> listeBoutons = new ArrayList<>();
 
         listeBoutons.add(((Button) findViewById(R.id.button)));
@@ -71,21 +71,18 @@ public class MainActivity extends AppCompatActivity {
 
     // Prend un bouton en paramètre et retourne vrai ou faux s'il est activé ou non.
     private boolean testBouton(Button btn) {
-        return btn.isEnabled();
+        return !btn.isEnabled();
     }
 
     // Fin de partie si l'ensemble des boutons a été utilisé, retourne true (partie finie) ou false.
-    private boolean finDePartie() {
-        if (!testBouton(((Button) findViewById(R.id.button))) && !testBouton(((Button) findViewById(R.id.button2))) && !testBouton(((Button) findViewById(R.id.button3))) && !testBouton(((Button) findViewById(R.id.button4))) && !testBouton(((Button) findViewById(R.id.button5))) && !testBouton(((Button) findViewById(R.id.button6))) && !testBouton(((Button) findViewById(R.id.button7))) && !testBouton(((Button) findViewById(R.id.button8))) && !testBouton(((Button) findViewById(R.id.button9)))) {
+    private void finDePartie() {
+        if (testBouton(((Button) findViewById(R.id.button))) && testBouton(((Button) findViewById(R.id.button2))) && testBouton(((Button) findViewById(R.id.button3))) && testBouton(((Button) findViewById(R.id.button4))) && testBouton(((Button) findViewById(R.id.button5))) && testBouton(((Button) findViewById(R.id.button6))) && testBouton(((Button) findViewById(R.id.button7))) && testBouton(((Button) findViewById(R.id.button8))) && testBouton(((Button) findViewById(R.id.button9)))) {
             Toast.makeText(MainActivity.this,"Fin", Toast.LENGTH_SHORT).show();
-            return true;
-        } else {
-            return false;
         }
     }
 
     // Détermination du gagnant avec analyse du plateau, retourne le gagnant.
-    private String gagnant() {
+    private void gagnant() {
 
         // XXX
         // ???
@@ -94,13 +91,10 @@ public class MainActivity extends AppCompatActivity {
         if ((((Button) findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button2)).getText().equals("X")) && (((Button) findViewById(R.id.button3)).getText().equals("X")) || (((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button2)).getText().equals("O")) && (((Button) findViewById(R.id.button3)).getText().equals("O"))) {
             if ((((Button) findViewById(R.id.button)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         // X??
@@ -110,13 +104,10 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         /*
@@ -128,13 +119,10 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button4)).getText().equals("X")) && (((Button) findViewById(R.id.button7)).getText().equals("X"))) || ((((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button4)).getText().equals("O")) && (((Button) findViewById(R.id.button7)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         /*
@@ -146,13 +134,10 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button4)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button6)).getText().equals("X"))) || ((((Button) findViewById(R.id.button4)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button6)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button4)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         /*
@@ -164,13 +149,10 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button2)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button8)).getText().equals("X"))) || ((((Button) findViewById(R.id.button2)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button8)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button2)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         /*
@@ -182,13 +164,10 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button3)).getText().equals("X")) && (((Button) findViewById(R.id.button6)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button3)).getText().equals("O")) && (((Button) findViewById(R.id.button6)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button3)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         /*
@@ -200,13 +179,10 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button3)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button7)).getText().equals("X"))) || ((((Button) findViewById(R.id.button3)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button7)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button3)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
         /*
@@ -218,27 +194,23 @@ public class MainActivity extends AppCompatActivity {
         else if (((((Button) findViewById(R.id.button7)).getText().equals("X")) && (((Button) findViewById(R.id.button8)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button7)).getText().equals("O")) && (((Button) findViewById(R.id.button8)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button7)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "X";
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
-                disableButtons();
-                return "O";
             }
+            disableButtons();
         }
 
-        return "error";
     }
 
     private void disableButtons() {
-        ((Button) findViewById(R.id.button)).setEnabled(false);
-        ((Button) findViewById(R.id.button2)).setEnabled(false);
-        ((Button) findViewById(R.id.button3)).setEnabled(false);
-        ((Button) findViewById(R.id.button4)).setEnabled(false);
-        ((Button) findViewById(R.id.button5)).setEnabled(false);
-        ((Button) findViewById(R.id.button6)).setEnabled(false);
-        ((Button) findViewById(R.id.button7)).setEnabled(false);
-        ((Button) findViewById(R.id.button8)).setEnabled(false);
-        ((Button) findViewById(R.id.button9)).setEnabled(false);
+        findViewById(R.id.button).setEnabled(false);
+        findViewById(R.id.button2).setEnabled(false);
+        findViewById(R.id.button3).setEnabled(false);
+        findViewById(R.id.button4).setEnabled(false);
+        findViewById(R.id.button5).setEnabled(false);
+        findViewById(R.id.button6).setEnabled(false);
+        findViewById(R.id.button7).setEnabled(false);
+        findViewById(R.id.button8).setEnabled(false);
+        findViewById(R.id.button9).setEnabled(false);
     }
 }
