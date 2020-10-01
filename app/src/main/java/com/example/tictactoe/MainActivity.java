@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
     private void ecouteBouton() {
         ArrayList<Button> listeBoutons = new ArrayList<>();
 
-        listeBoutons.add(((Button) findViewById(R.id.button)));
-        listeBoutons.add(((Button) findViewById(R.id.button2)));
-        listeBoutons.add(((Button) findViewById(R.id.button3)));
-        listeBoutons.add(((Button) findViewById(R.id.button4)));
-        listeBoutons.add(((Button) findViewById(R.id.button5)));
-        listeBoutons.add(((Button) findViewById(R.id.button6)));
-        listeBoutons.add(((Button) findViewById(R.id.button7)));
-        listeBoutons.add(((Button) findViewById(R.id.button8)));
-        listeBoutons.add(((Button) findViewById(R.id.button9)));
+        listeBoutons.add(( findViewById(R.id.button)));
+        listeBoutons.add(( findViewById(R.id.button2)));
+        listeBoutons.add(( findViewById(R.id.button3)));
+        listeBoutons.add(( findViewById(R.id.button4)));
+        listeBoutons.add(( findViewById(R.id.button5)));
+        listeBoutons.add(( findViewById(R.id.button6)));
+        listeBoutons.add(( findViewById(R.id.button7)));
+        listeBoutons.add(( findViewById(R.id.button8)));
+        listeBoutons.add(( findViewById(R.id.button9)));
         for (final Button value : listeBoutons) {
             value.setOnClickListener(new Button.OnClickListener(){
                 public void onClick(View v) {
@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
         // ???
         // ???
 
-        if ((((Button) findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button2)).getText().equals("X")) && (((Button) findViewById(R.id.button3)).getText().equals("X")) || (((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button2)).getText().equals("O")) && (((Button) findViewById(R.id.button3)).getText().equals("O"))) {
-            if ((((Button) findViewById(R.id.button)).getText().equals("X"))) {
+        if ((( findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button2)).getText().equals("X")) && (((Button) findViewById(R.id.button3)).getText().equals("X")) || (((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button2)).getText().equals("O")) && (((Button) findViewById(R.id.button3)).getText().equals("O"))) {
+            if ((( findViewById(R.id.button)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(MainActivity.this,"O a gagné", Toast.LENGTH_SHORT).show();
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         // ?X?
         // ??X
 
-        else if (((((Button) findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
+        else if (((( findViewById(R.id.button)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             ???
         */
 
-        else if (((((Button) findViewById(R.id.button4)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button6)).getText().equals("X"))) || ((((Button) findViewById(R.id.button4)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button6)).getText().equals("O")))) {
+        else if (((( findViewById(R.id.button4)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button6)).getText().equals("X"))) || ((((Button) findViewById(R.id.button4)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button6)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button4)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             ?X?
         */
 
-        else if (((((Button) findViewById(R.id.button2)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button8)).getText().equals("X"))) || ((((Button) findViewById(R.id.button2)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button8)).getText().equals("O")))) {
+        else if (((( findViewById(R.id.button2)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button8)).getText().equals("X"))) || ((((Button) findViewById(R.id.button2)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button8)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button2)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
             ??X
         */
 
-        else if (((((Button) findViewById(R.id.button3)).getText().equals("X")) && (((Button) findViewById(R.id.button6)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button3)).getText().equals("O")) && (((Button) findViewById(R.id.button6)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
+        else if (((( findViewById(R.id.button3)).getText().equals("X")) && (((Button) findViewById(R.id.button6)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button3)).getText().equals("O")) && (((Button) findViewById(R.id.button6)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button3)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
@@ -176,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
             X??
         */
 
-        else if (((((Button) findViewById(R.id.button3)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button7)).getText().equals("X"))) || ((((Button) findViewById(R.id.button3)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button7)).getText().equals("O")))) {
+        else if (((( findViewById(R.id.button3)).getText().equals("X")) && (((Button) findViewById(R.id.button5)).getText().equals("X")) && (((Button) findViewById(R.id.button7)).getText().equals("X"))) || ((((Button) findViewById(R.id.button3)).getText().equals("O")) && (((Button) findViewById(R.id.button5)).getText().equals("O")) && (((Button) findViewById(R.id.button7)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button3)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
             XXX
         */
 
-        else if (((((Button) findViewById(R.id.button7)).getText().equals("X")) && (((Button) findViewById(R.id.button8)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button7)).getText().equals("O")) && (((Button) findViewById(R.id.button8)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
+        else if (((( findViewById(R.id.button7)).getText().equals("X")) && (((Button) findViewById(R.id.button8)).getText().equals("X")) && (((Button) findViewById(R.id.button9)).getText().equals("X"))) || ((((Button) findViewById(R.id.button7)).getText().equals("O")) && (((Button) findViewById(R.id.button8)).getText().equals("O")) && (((Button) findViewById(R.id.button9)).getText().equals("O")))) {
             if ((((Button) findViewById(R.id.button7)).getText().equals("X"))) {
                 Toast.makeText(MainActivity.this,"X a gagné", Toast.LENGTH_SHORT).show();
             } else {
