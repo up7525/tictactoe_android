@@ -201,16 +201,4 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-    private void disableButtons() {
-        findViewById(R.id.button).setEnabled(false);
-        findViewById(R.id.button2).setEnabled(false);
-        findViewById(R.id.button3).setEnabled(false);
-        findViewById(R.id.button4).setEnabled(false);
-        findViewById(R.id.button5).setEnabled(false);
-        findViewById(R.id.button6).setEnabled(false);
-        findViewById(R.id.button7).setEnabled(false);
-        findViewById(R.id.button8).setEnabled(false);
-        findViewById(R.id.button9).setEnabled(false);
-    }
 }
